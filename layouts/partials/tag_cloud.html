@@ -3,7 +3,9 @@
 <div class="dn tr fixed right-2" id="tag-cloud">
     tags <br>
     {{ range first $maxtags .Site.Taxonomies.tags.ByCount }}
-    <a class="silver no-underline" href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}">{{ .Name }}</a></li>
+    <a class="silver no-underline" href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}">
+      <span class="secondary-color">#</span>{{ .Name }}
+    </a>
   {{ end }}
 </div>
 {{ end }}
