@@ -198,3 +198,37 @@ table tr td {
   background: rgba(0, 0, 0, .2);
   border-radius: 3px;
 }
+
+#comment a {
+  color: #656c7a !important;
+}
+
+
+#comment a:hover {
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: var(--hover-text-color);
+}
+
+.copyright a {
+  color: #656c7a;
+  text-decoration: none;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.4); */
+}
+
+.copyright a:hover {
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: var(--hover-text-color);
+}
+
+figcaption.image-caption {
+  outline: none;
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.page-title {
+  text-align: center;
+}

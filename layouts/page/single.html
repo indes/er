@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="center mv4 content-width ph3">
+  <div class="f2 fw6 heading-color heading-font page-title">{{ .Title }}</div>
+  <p class="silver f6 mt1 mb4 post-meta">
+
+  </p>
+  <div class="lh-copy post-content">{{ .Content }}</div>
+</main>
+{{ partial "table-of-contents" . }}
+<div class="pagination tc tr-l db fixed-l bottom-2-l right-2-l mb3 mb0-l">
+  {{ partial "back-to-top.html" . }}<br>
+  <p class="mb0 mt2">
+  </p>
+</div>
+{{ end }}

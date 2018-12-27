@@ -9,10 +9,10 @@
         <time>{{ .Date.Format "02 Jan 2006" }}</time>
         {{ if or .Params.tags .Params.categories }} | {{ end }}
         {{ if isset .Params "categories" }}
-        categories: [ {{ range .Params.categories }}<a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} ]
+        {{ range .Params.categories }}<a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} 
         {{ end }}
         {{ if isset .Params "tags" }}
-        tags: [ {{ range .Params.tags }}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} ]
+        [ {{ range .Params.tags }}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="link silver">#{{ . }}</a> {{ end }} ]
         {{ end }}
       </p>
     </li>

@@ -5,11 +5,12 @@
     {{ if not .Date.IsZero }}<time>{{ .Date.Format "02 Jan 2006" }}</time> {{ end }}
     {{ if or .Params.tags .Params.categories .Params.series }} | {{ end }}
     {{ if isset .Params "categories" }}
-    categories: [ {{ range .Params.categories }}<a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} ]
+    {{ range .Params.categories }}<a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }}
     {{ end }}
     {{ if isset .Params "tags" }}
-    tags: [ {{ range .Params.tags }}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} ]
-    {{ end }}
+     [ {{ range .Params.tags }}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="link silver">#{{ . }}</a> {{ end }} ]
+    {{ end }} |
+    <span class="post-word-count"> {{ .WordCount }} words</span>
   </p>
   <div class="lh-copy post-content">{{ .Content }}</div>
 </main>
